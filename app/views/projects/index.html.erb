@@ -1,0 +1,18 @@
+<h1> Projects </h1>
+
+<table>
+	<tr>
+		<th>Name</th>
+	</tr>
+
+	<% @projects.each do |project| %>
+		<tr>
+			<td><%= project.display_name %></td>
+			<td><%= link_to 'details', project_path(project) %></td>
+		</tr>
+	<% end %>
+</table>
+
+<h2> Other Actions <h2></h2>
+
+<p><%= link_to 'New Project', controller: "projects", action: "new" %></p>

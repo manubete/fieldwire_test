@@ -1,0 +1,33 @@
+<p>
+	<strong>Display Name:</strong>
+	<%= @project.display_name %>
+</p><br>
+
+<p>
+	<div>
+		<% @floorplans.each do |floorplan| %>
+			<p>
+				<strong>Floorplan Name</strong>
+				<%= floorplan.display_name %>
+			</p>
+
+			<p>
+				<strong>original Image</strong>
+				<%= image_tag floorplan.image %>
+			</p>
+
+			<p>
+				<strong>Thumb Image</strong>
+				<%= image_tag floorplan.image.thumb.url %>
+			</p>
+
+			<p>
+				<strong>Large Image</strong>
+				<%= image_tag floorplan.image.large.url %>
+			</p>
+
+		<% end %>
+	</div>
+</p>
+
+<p><%= link_to 'New floorplan', new_project_floorplan_path(@project, @floorplan) %></p>

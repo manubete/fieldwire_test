@@ -1,0 +1,2 @@
+module FloorplanHelper
+end

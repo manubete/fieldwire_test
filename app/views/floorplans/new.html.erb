@@ -1,0 +1,19 @@
+<h1>Form</h1>
+<%= form_for :floorplan, url: project_floorplans_path, html: { multipart: true } do |f| %>
+    <%= f.hidden_field :project_id %>
+ 	<div class="field">
+    	<%= f.label :display_name %><br>
+    	<%= f.text_field :display_name %><br>
+    </div>
+
+    <div class="field">
+    	<%= f.label :image %><br>
+    	<%= f.file_field :image %><br>
+    </div>
+
+    <div class="actions">
+    	<br>
+    	<%= f.submit %>
+    </div>
+
+<% end %>
